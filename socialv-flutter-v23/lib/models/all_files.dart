@@ -4,6 +4,7 @@ import 'package:socialv/configs.dart';
 import 'package:socialv/main.dart';
 import 'package:socialv/screens/dashboard_screen.dart';
 import 'package:socialv/screens/groups/screens/group_screen.dart';
+import 'package:socialv/screens/messages/screen.dart';
 import 'package:socialv/screens/post/screens/add_post_screen.dart';
 import 'package:socialv/screens/post/screens/social_links.dart';
 import 'package:socialv/screens/profile/components/custom_card_button.dart';
@@ -25,6 +26,7 @@ class AllLinksScreen extends StatefulWidget {
 
 class _AllLinksScreenState extends State<AllLinksScreen> {
 
+  ScrollController _controller = ScrollController();
   late TabController tabController;
 
   @override
@@ -166,7 +168,7 @@ class _AllLinksScreenState extends State<AllLinksScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: CustomCardButton(
                         onPress: () {
-                          EditProfileScreen().launch(context).then((value) {
+                          MessagesPage(controller: _controller,).launch(context).then((value) {
                             if (value ?? false) {
                               setState(() {});
                             }

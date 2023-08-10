@@ -52,7 +52,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
     if (widget.activityId != null) {
       if (appStore.isLoggedIn) {
-        SinglePostScreen(postId: widget.activityId.validate()).launch(context, isNewTask: true);
+        AllLinksScreen().launch(context, isNewTask: true);
+        // SinglePostScreen(postId: widget.activityId.validate()).launch(context, isNewTask: true);
       } else {
         SignInScreen(activityId: widget.activityId.validate()).launch(context, isNewTask: true);
       }
