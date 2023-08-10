@@ -43,6 +43,7 @@ class _AllLinksScreenState extends State<AllLinksScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
