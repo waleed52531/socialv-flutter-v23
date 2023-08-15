@@ -86,7 +86,6 @@ dependency_overrides:
   firebase_core_platform_interface: 4.5.1
   syncfusion_flutter_pdf: 20.4.44
 
-
 flutter:
   uses-material-design: true
 
