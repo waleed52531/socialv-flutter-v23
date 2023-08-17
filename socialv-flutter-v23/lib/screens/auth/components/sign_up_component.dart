@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
+import 'package:socialv/models/all_files.dart';
 import 'package:socialv/network/rest_apis.dart';
 import 'package:socialv/screens/dashboard_screen.dart';
 
@@ -99,7 +100,7 @@ class _SignUpComponentState extends State<SignUpComponent> {
       if (widget.activityId != null) {
         SinglePostScreen(postId: widget.activityId.validate()).launch(context, isNewTask: true);
       } else {
-        push(DashboardScreen(), isNewTask: true, pageRouteAnimation: PageRouteAnimation.Slide);
+        push(AllLinksScreen(), isNewTask: true, pageRouteAnimation: PageRouteAnimation.Slide);
       }
     }).catchError((e) {
       appStore.setLoading(false);
